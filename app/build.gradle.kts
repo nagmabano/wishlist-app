@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.nagma.mywishlistapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.nagma.mywishlistapp"
