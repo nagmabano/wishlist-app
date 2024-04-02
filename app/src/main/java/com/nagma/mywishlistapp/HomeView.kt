@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Colors
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.icons.Icons
@@ -22,7 +23,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.nagma.mywishlistapp.data.DummyWish
 import com.nagma.mywishlistapp.data.Wish
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -48,6 +51,11 @@ fun HomeView() {
         LazyColumn(modifier = Modifier
             .fillMaxSize()
             .padding(it)) {
+            items(DummyWish.wishList) {
+                wish -> WishItem(wish = wish) {
+
+              }
+            }
 
         }
 
@@ -75,3 +83,10 @@ fun WishItem(wish: Wish, onClick: () -> Unit) {
     }
 
 }
+
+//@Preview(showBackground = true)
+//@Composable
+//fun WishItemPreview() {
+//    val wish = Wish(10, "title", "description")
+//    WishItem( wish = wish, {})
+//}
