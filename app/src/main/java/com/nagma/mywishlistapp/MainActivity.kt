@@ -29,8 +29,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun HomeViewPreview() {
-    HomeView()
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun HomeViewPreview() {
+//    HomeView()
+//}
