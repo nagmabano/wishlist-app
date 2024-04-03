@@ -87,6 +87,14 @@ fun AddEditDetailView(
 
                     if (id != 0L) {
                         // TODO Update Wish
+                        viewModel.updateAWish(
+                            Wish(
+                            id = id,
+                            title = viewModel.wishTitleState.trim(),
+                            description = viewModel.wishDescriptionState.trim()
+                            )
+                        )
+                        snackMessage.value = "Wish has been updated"
                     } else {
                         // TODO Add Wish
                         viewModel.addAWish(
