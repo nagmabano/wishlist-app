@@ -58,7 +58,7 @@ fun HomeView(
             .padding(it)) {
             items(DummyWish.wishList) {
                 wish -> WishItem(wish = wish) {
-
+                navController.navigate(Screen.AddScreen.route)
               }
             }
 
